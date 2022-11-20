@@ -25,9 +25,7 @@ public class RestTemplateConfig {
     public RestTemplate restTemplate(
             RestTemplateBuilder builder) {
         log.info("application port: {}, contextPath: {}", port, contextPath);
-        StringBuilder rootUri = new StringBuilder("http://localhost:")
-                .append(port)
-                .append(contextPath);
+        StringBuilder rootUri = new StringBuilder("http://localhost:").append(port).append(contextPath);
         return builder
                 .rootUri(rootUri.toString())
                 .build();
